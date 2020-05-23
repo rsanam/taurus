@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="examples/BOOTH1"/>
+	<classpathentry kind="src" path="examples/BOOTH2"/>
+	<classpathentry kind="src" path="examples/functional"/>
+	<classpathentry excluding="phantomjs-demo/src/test/java/|maven-project/src/test/java/|maven-project/src/main/java/|WDJavaExample/" kind="src" path="examples/selenium"/>
+	<classpathentry kind="src" path="examples/selenium/maven-project/src/main/java"/>
+	<classpathentry kind="src" path="examples/selenium/maven-project/src/test/java"/>
+	<classpathentry kind="src" path="examples/selenium/phantomjs-demo/src/test/java"/>
+	<classpathentry kind="src" path="examples/selenium/WDJavaExample"/>
+	<classpathentry excluding="selenium/junit/java_package/src/|selenium/invalid/|selenium/junit/java/" kind="src" path="tests/resources"/>
+	<classpathentry kind="src" path="tests/resources/selenium/invalid"/>
+	<classpathentry kind="src" path="tests/resources/selenium/junit/java"/>
+	<classpathentry kind="src" path="tests/resources/selenium/junit/java_package/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
