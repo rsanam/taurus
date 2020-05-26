@@ -74,6 +74,6 @@ node()
          currentBuild.result = "FAILED"
          throw e
     } finally {
-         smartSlackNotification(channel: "taurus-dev", buildStatus:currentBuild.result ?: 'SUCCESS')
+         //smartSlackNotification(channel: "taurus-dev", buildStatus:currentBuild.result ?: 'SUCCESS')
     }
 }
