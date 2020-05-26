@@ -225,7 +225,7 @@ class JMX(object):
             "responseHeaders": False,
             "requestHeaders": False,
             "responseDataOnError": False,
-            "saveAssertionResultsFailureMessage": False,
+            "saveAssertionResultsFailureMessage": True,
             "bytes": True,
             "hostname": True,
             "threadCounts": True,
