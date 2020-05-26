@@ -11,11 +11,14 @@ node()
             commitHash = scmVars.GIT_COMMIT
             isTag =  scmVars.GIT_BRANCH.startsWith("refs/tags/")
             IMAGE_TAG = env.JOB_NAME + "." + env.BUILD_NUMBER
+            echo IMAGE_TAG
             IMAGE_TAG = IMAGE_TAG.toLowerCase()
+            echo IMAGE_TAG
         }
 
         stage("Docker Image Build")
         {
+           echo JOB_NAME
             sh """
                 docker build -t ${JOB_NAME} .
                 """
