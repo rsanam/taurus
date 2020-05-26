@@ -19,9 +19,7 @@ node()
         stage("Docker Image Build")
         {
            echo JOB_NAME
-           echo sh """
-                pwd
-                """
+        
             sh """
                 docker build -t ${JOB_NAME} .
                 """
