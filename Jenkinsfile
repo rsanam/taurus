@@ -51,12 +51,12 @@ node()
             archiveArtifacts artifacts: 'dist/*.whl', fingerprint: true
         }
 
-        /*stage("Deploy site")
+        stage("Deploy site")
         {
             sh """
                 docker build -t deploy-image -f site/Dockerfile.deploy .
                 """
-            PROJECT_ID="blazemeter-taurus-website-prod"
+            /*PROJECT_ID="blazemeter-taurus-website-prod"
             withCredentials([file(credentialsId: "${PROJECT_ID}", variable: 'CRED_JSON')]) {
                 def WORKSPACE_JSON = 'Google_credentials.json'
                 def input = readJSON file: CRED_JSON
@@ -71,14 +71,14 @@ node()
                     -v `pwd`:/bzt -t deploy-image \
                     ${isTag}
                     """
-            }
+            }*/
 
         }
-    } catch (e) {
-         currentBuild.result = "FAILED"
-         throw e
-    } finally {
+   // } catch (e) {
+   //      currentBuild.result = "FAILED"
+  //       throw e
+ //   } finally {
          //smartSlackNotification(channel: "taurus-dev", buildStatus:currentBuild.result ?: 'SUCCESS')
-    }*/
+   // }*/
 }
 //}
