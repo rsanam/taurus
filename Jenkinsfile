@@ -28,11 +28,11 @@ node()
         stage("Integration Tests")
         {
             sh """
-                docker run -v `pwd`:/bzt-configs -v `pwd`/integr-artifacts:/tmp/artifacts ${JOB_NAME} -sequential examples/all-executors.yml
+                docker run -v `pwd`:/bzt-configs -v `pwd`/integr-artifacts/${BUILD_NUMBER}:/tmp/artifacts ${JOB_NAME} -sequential examples/all-executors.yml
                 """
         }
 
-        stage("Create Artifacts")
+        /*stage("Create Artifacts")
         {
             sh """
                 sed -ri "s/OS: /Rev: ${commitHash}; OS: /" bzt/cli.py
@@ -73,7 +73,7 @@ node()
                     """
             }*/
 
-        }
+       // }
    // } catch (e) {
    //      currentBuild.result = "FAILED"
   //       throw e
