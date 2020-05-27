@@ -25,7 +25,7 @@ node()
                 """
         }
 
-       /* stage("Integration Tests")
+        stage("Integration Tests")
         {
             sh """
                 docker run -v `pwd`:/bzt-configs -v `pwd`/integr-artifacts:/tmp/artifacts ${JOB_NAME} -sequential examples/all-executors.yml
