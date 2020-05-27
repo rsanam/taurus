@@ -25,7 +25,7 @@ node()
                 """
         }
 
-        stage("Integration Tests")
+       /* stage("Integration Tests")
         {
             sh """
                 docker run -v `pwd`:/bzt-configs -v `pwd`/integr-artifacts:/tmp/artifacts ${JOB_NAME} -sequential examples/all-executors.yml
@@ -51,7 +51,7 @@ node()
             archiveArtifacts artifacts: 'dist/*.whl', fingerprint: true
         }
 
-        stage("Deploy site")
+        /*stage("Deploy site")
         {
             sh """
                 docker build -t deploy-image -f site/Dockerfile.deploy .
@@ -79,5 +79,5 @@ node()
          throw e
     } finally {
          //smartSlackNotification(channel: "taurus-dev", buildStatus:currentBuild.result ?: 'SUCCESS')
-    }
+    }*/
 }
