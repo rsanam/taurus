@@ -2,8 +2,8 @@
 
 node()
 {
-    try
-    {
+    //try
+    //{
         stage('Checkout')
         {
             cleanWs()
@@ -81,4 +81,4 @@ node()
          //smartSlackNotification(channel: "taurus-dev", buildStatus:currentBuild.result ?: 'SUCCESS')
     }*/
 }
-}
+//}
