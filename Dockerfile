@@ -1,11 +1,17 @@
-#FROM ubuntu:18.04
-FROM jenkinsci/slave
+FROM ubuntu:18.04
+# FROM jenkinsci/slave
 
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null DEBIAN_FRONTEND=noninteractive APT_INSTALL="apt-get -y install --no-install-recommends"
 
 WORKDIR /tmp
 ADD https://dl-ssl.google.com/linux/linux_signing_key.pub /tmp
 ADD https://deb.nodesource.com/setup_10.x /tmp
+
+RUN apt-get update \
+    && apt-get install -y software-properties-common
+RUN apt-get update \
+    && apt-get install -y software-properties-common
+
 RUN apt-get -y update \
   && apt-get -y install dirmngr \
   && $APT_INSTALL software-properties-common apt-utils \
